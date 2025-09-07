@@ -1,7 +1,7 @@
 # 🌐 Professional-Portfolio-3
 
-A modern and responsive **personal portfolio website** built with **React.js** and **Tailwind CSS**.  
-It showcases professional skills, services, and projects in a clean and minimal design, making it perfect for developers, designers, and professionals looking to establish a strong online presence.
+A modern and responsive **personal portfolio website** built with **React**.
+It showcases professional skills, services, and projects in a clean and minimal design.
 
 ---
 
