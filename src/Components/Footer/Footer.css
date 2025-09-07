@@ -76,10 +76,44 @@
     .footer-top {
         flex-direction: column;
         gap: 50px;
+
+        align-items: stretch;
     }
     .footer-bottom {
-        display: flex;
+        /* display: flex; */
         flex-direction: column-reverse;
         margin-bottom: 50px;
+
+        gap: 15px;
+        text-align: center;
+        align-items: center;
+    }
+
+
+    .footer-top-right {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+    .footer-email-input {
+        flex: 1;
+        width: 100%;
+        padding: 15px 20px;
+        padding-right: 20px;
+    }
+    .footer-email-input input {
+        font-size: 16px;
+        width: 100%;
+    }
+    .footer-bottom-right {
+        flex-wrap: wrap; /* wrap if too small */
+        gap: 20px;
+        justify-content: center;
+    }
+    .footer-subscribe {
+        width: 100%; /* button takes full width on mobile */
+        text-align: center;
+        padding: 15px 0; /* reduce padding so it doesn’t overflow */
+        font-size: 18px;
     }
 }
