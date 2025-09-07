@@ -60,7 +60,11 @@
 
 @media(max-width:768px) {
     .navbar {
-        margin: 20px 50px;
+        margin: 0;
+        padding: 20px 0;
+    }
+    .nav-logo {
+        margin-left: 0;
     }
     .nav-connect {
         display: none;
