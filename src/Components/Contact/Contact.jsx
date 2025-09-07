@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Contact.css'
 import theme_pattern from '../../assets/theme_pattern.svg'
 import mail_icon from '../../assets/mail_icon.svg'
@@ -6,6 +6,24 @@ import location_icon from '../../assets/location_icon.svg'
 import call_icon from '../../assets/call_icon.svg'
 
 const Contact = () => {
+  useEffect(()=>{
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach((entry)=>{
+        if(entry.isIntersecting) {
+          entry.target.classList.add('show')
+          observer.unobserve(entry.target)
+        }
+      })
+    })
+    const hiddenElements = document.querySelectorAll('.hidden')
+    hiddenElements.forEach((el)=>observer.observe(el))
+
+    return () => {
+      hiddenElements.forEach((el)=> observer.unobserve(el))
+    }
+    
+  }, [])
+
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -31,15 +49,15 @@ const Contact = () => {
 
   return (
     <div id='contact' className='contact'>
-      <div className="contact-title">
+      <div className="contact-title hidden">
         <h1>Get in touch</h1>
         <img src={theme_pattern} alt="" />
       </div>
       <div className="contact-section">
-        <div className="contact-left">
+        <div className="contact-left hidden">
             <h1>Let's talk</h1>
             <p>I'm currently available to take on new pojects, so feel free to contact me about anything that you want me to work on. You can contact me anytime.</p>
-            <div className="contact-details">
+            <div className="contact-details hidden">
                 <div className="contact-detail">
                     <img src={mail_icon} alt="" /> <p>joeducer.official@gmail.com</p>
                 </div>
@@ -51,7 +69,7 @@ const Contact = () => {
                 </div>
             </div>
         </div>
-        <form onSubmit={onSubmit} className='contact-right'>
+        <form onSubmit={onSubmit} className='contact-right hidden'>
             <label htmlFor="name">Your Name</label>
             <input id='name' type="text" placeholder='Enter your name' name='name' />
             <label htmlFor="email">Your Email</label>

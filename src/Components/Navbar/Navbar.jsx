@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './Navbar.css'
 import logo from '../../assets/logo 1.svg'
 import underline from '../../assets/nav_underline.svg'
@@ -9,19 +9,47 @@ import menu_close from '../../assets/menu_close.svg'
 const Navbar = () => {
 
   const [menu, setMenu] = useState("home");
+  const [isScrolled, setIsScrolled] = useState(false);
   const menuRef = useRef();
 
   const openMenu = () => {
-    menuRef.current.style.right = "0";
+    if (menuRef.current) menuRef.current.style.right = "0";
   }
   const closeMenu = () => {
-    menuRef.current.style.right = "-350px";
+    if (menuRef.current) menuRef.current.style.right = "-350px";
   }
+
+  // useEffect(()=>{
+  //   const heroSection = document.getElementById("home");
+  //   const heroHeight = heroSection?.offsetHeight || 0;
+
+  //   const handleScroll = () => {
+  //     if (window.scrollY > heroHeight - 100) {
+  //       setShowMenuIcon(false);
+  //     } else {
+  //       setShowMenuIcon(true);
+  //     }
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // run once on mount
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className='navbar'>
       <img src={logo} alt='' />
-      <img src={menu_open} onClick={openMenu} alt="" className='nav-mob-open' />
+      {/* {showMenuIcon && (<img src={menu_open} onClick={openMenu} alt="" className='nav-mob-open' />)} */}
+      <img src={menu_open} onClick={openMenu} alt="" className={`nav-mob-open ${isScrolled ? 'hidden' : ''}`} />
       <ul ref={menuRef} className='nav-menu'>
         <img src={menu_close} onClick={closeMenu} alt="" className='nav-mob-close' />
         <li><AnchorLink className='anchor-link' href='#home'><p onClick={()=>setMenu("home")}>Home</p></AnchorLink>{menu==="home"?<img src={underline} alt='' />:<></>}</li>
