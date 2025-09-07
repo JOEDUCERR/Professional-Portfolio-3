@@ -10,13 +10,18 @@ const Navbar = () => {
 
   const [menu, setMenu] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const menuRef = useRef();
 
   const openMenu = () => {
     if (menuRef.current) menuRef.current.style.right = "0";
+    setIsMenuOpen(true);
   }
   const closeMenu = () => {
     if (menuRef.current) menuRef.current.style.right = "-350px";
+    setIsMenuOpen(false);
   }
 
   // useEffect(()=>{
@@ -49,7 +54,7 @@ const Navbar = () => {
     <div className='navbar'>
       <img src={logo} alt='' />
       {/* {showMenuIcon && (<img src={menu_open} onClick={openMenu} alt="" className='nav-mob-open' />)} */}
-      <img src={menu_open} onClick={openMenu} alt="" className={`nav-mob-open ${isScrolled ? 'hidden' : ''}`} />
+      <img src={menu_open} onClick={openMenu} alt="" className={`nav-mob-open ${(isScrolled || isMenuOpen) ? 'hidden' : ''}`} />
       <ul ref={menuRef} className='nav-menu'>
         <img src={menu_close} onClick={closeMenu} alt="" className='nav-mob-close' />
         <li><AnchorLink className='anchor-link' href='#home'><p onClick={()=>setMenu("home")}>Home</p></AnchorLink>{menu==="home"?<img src={underline} alt='' />:<></>}</li>
