@@ -109,8 +109,8 @@
         margin-right: -20px;
     }
     .services-format {
-        gap: 20px;
-        padding: 32px;
+        gap: 0px;
+        padding: 20px;
     }
     .services-format h2 {
         font-size: 28px;
