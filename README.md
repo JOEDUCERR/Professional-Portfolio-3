@@ -1,12 +1,58 @@
-# React + Vite
+# 🌐 Professional-Portfolio-3
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive **personal portfolio website** built with **React.js** and **Tailwind CSS**.  
+It showcases professional skills, services, and projects in a clean and minimal design, making it perfect for developers, designers, and professionals looking to establish a strong online presence.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📸 Preview
+![Portfolio Screenshot](result.png)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Features
+- 🎨 Responsive design optimized for all screen sizes  
+- 🧩 Modular React components for scalability  
+- 🔗 Smooth scroll navigation with `react-anchor-link-smooth-scroll` 
+- 🛠️ Services, About, and Contact sections  
+- 📄 Downloadable resume button  
+- 🌍 Easy to deploy on **Vercel**, **Netlify**, or GitHub Pages  
+
+---
+
+## 🛠️ Tech Stack
+- **React.js** – frontend library  
+- **Tailwind CSS** – styling and responsive design  
+- **JavaScript (ES6+)**  
+- **React Anchor Link Smooth Scroll** – smooth section navigation  
+
+---
+
+## 📂 Project Structure
+```bash
+Professional-Portfolio-3/
+│
+├── public/               # Static files (favicon, images, etc.)
+├── src/
+│   ├── assets/           # Images, icons, and SVGs
+│   ├── components/       # Reusable UI components
+│   │   ├── Hero/         
+│   │   ├── Services/
+│   │   ├── About/
+│   │   └── Contact/
+│   ├── App.js            # Main app file
+│   ├── index.js          # Entry point
+│   └── styles/           # Global CSS / Tailwind setup
+│
+├── package.json
+├── tailwind.config.js
+├── README.md
+└──
+```
+
+---
+
+## 👨‍💻 Author
+Jonah Sudhir
+AI/ML Engineer | Full-Stack Developer
+📍 India
