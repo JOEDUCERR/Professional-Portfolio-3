@@ -28,6 +28,11 @@
     display: flex;
     gap: 80px;
 }
+.about-left img {
+    border-radius: 10px;
+    filter: saturate(130%);
+    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.5));
+}
 
 .about-right {
     display: flex;

@@ -43,6 +43,10 @@
     margin-bottom: 80px;
 }
 
+.services-format {
+    text-decoration: none;
+}
+
 .services-format h3 {
     font-size: 28px;
     font-weight: 600;

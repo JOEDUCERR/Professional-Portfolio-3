@@ -16,10 +16,10 @@ const MyWork = () => {
             return <img key={index} src={work.w_img} alt='' />
         })}
       </div>
-      <div className='mywork-showmore'>
+      <a href='https://github.com/JOEDUCERR' target='_blank' rel='noopener noreferrer' className='mywork-showmore'>
         <p>Show More</p>
         <img src={arrow_icon} alt="" />
-      </div>
+      </a>
     </div>
   )
 }
