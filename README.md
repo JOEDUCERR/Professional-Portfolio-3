@@ -21,9 +21,8 @@ It showcases professional skills, services, and projects in a clean and minimal 
 ---
 
 ## 🛠️ Tech Stack
-- **React.js** – frontend library  
-- **Tailwind CSS** – styling and responsive design  
-- **JavaScript (ES6+)**  
+- **React.js** – frontend library
+- **JavaScript**  
 - **React Anchor Link Smooth Scroll** – smooth section navigation  
 
 ---
@@ -42,7 +41,6 @@ Professional-Portfolio-3/
 │   │   └── Contact/
 │   ├── App.js            # Main app file
 │   ├── index.js          # Entry point
-│   └── styles/           # Global CSS / Tailwind setup
 │
 ├── package.json
 ├── tailwind.config.js
