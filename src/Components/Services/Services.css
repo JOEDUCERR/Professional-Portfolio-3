@@ -109,8 +109,8 @@
         margin-right: -20px;
     }
     .services-format {
-        gap: 0px;
-        padding: 20px;
+        gap: 20px;
+        padding: 32px;
     }
     .services-format h2 {
         font-size: 28px;
@@ -124,7 +124,7 @@
         width: 20px;
     }
     .services-container {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 30px;
     }
 }
